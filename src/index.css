@@ -5,9 +5,38 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #23234b;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.chart-card {
+  width: 150px;
+  height: 100px;
+  clip-path: polygon(
+    0 0,
+    0 0,
+
+    100% 6px,
+    100% calc(100% - 6px),
+    calc(100% - 6px) 100%,
+    6px 100%,
+
+    0 calc(100% - 6px),
+    0 6px
+  );
+
+  background: linear-gradient(-45deg, #289eef 4px, transparent 0) bottom right,
+    linear-gradient(45deg, #289eef 4px, transparent 0) bottom left,
+    linear-gradient(135deg, #289eef 4px, transparent 0) top left,
+    linear-gradient(-135deg, #289eef 4px, transparent 0) top right;
+
+  background-size: 50% 51%;
+
+  background-repeat: no-repeat;
+
+  border: solid 2px #289eef;
 }
